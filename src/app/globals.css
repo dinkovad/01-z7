@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.menu-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.menu-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Настройте желаната височина на линията */
+  width: 0;
+  height: 2px; /* Настройте желаната дебелина на линията */
+  background-color: black; /* Цвят на линията */
+  transition: width 0.3s ease; /* Ефект на преход за ширината на линията */
+}
+
+.menu-item:hover::after {
+  width: 100%;
+}
+
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -0.5px;
+  line-height: 140%;
+}
+
+
+
